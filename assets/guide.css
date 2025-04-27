@@ -1,7 +1,6 @@
 /* Base styles */
 body {
     transition: background-color 0.3s ease, color 0.3s ease;
-
 }
 
 /* Typography examples */
@@ -1214,11 +1213,38 @@ body.dark-mode .dark-mode-examples .accent-text-content.light {
 
 /* Header content layout */
 .header-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: var(--space-m);
-    margin-bottom: var(--space-m);
+    position: relative;
+    z-index: 1;
+    background-color: var(--color-background);
+    border-radius: var(--radius-m);
+    padding: var(--space-m);
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header-content h1 {
+    margin: 0;
+    width: 100%;
+    height: auto;
+}
+
+.header-content svg {
+    width: 100%;
+    height: auto;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .header-content {
+        padding: var(--space-s);
+    }
+    
+    .header-content svg {
+        max-width: 100%;
+    }
 }
 
 .header-logo {
@@ -1228,11 +1254,33 @@ body.dark-mode .dark-mode-examples .accent-text-content.light {
 }
 
 @media (max-width: 768px) {
-    .header-content {
-        text-align: center;
-    }
-    
     .header-logo {
         height: 180px;
     }
+}
+
+:root {
+    /* Logo colors */
+    --color-logo-text: rgb(0,36,46);
+}
+
+body.dark-mode {
+    --color-logo-text: rgb(121,191,68);
+}
+
+/* Logo text color handling */
+#logo-text text,
+#logo-text path {
+    fill: var(--color-logo-text);
+}
+
+/* Logo text color handling */
+body:not(.dark-mode) #logo-text text,
+body:not(.dark-mode) #logo-text path {
+    fill: rgb(0,36,46);
+}
+
+body.dark-mode #logo-text text,
+body.dark-mode #logo-text path {
+    fill: rgb(121,191,68);
 }
