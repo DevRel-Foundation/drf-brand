@@ -1,0 +1,232 @@
+/* Website-specific styles */
+
+/* Navigation styles */
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: var(--step-2);
+    font-weight: 700;
+    color: var(--color-gold);
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: var(--space-m);
+}
+
+.nav-menu a {
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+    color: var(--color-text);
+}
+
+.nav-menu a.active {
+    color: var(--color-gold);
+}
+
+.nav-menu a:hover {
+    text-decoration: none;
+}
+
+/* Header styles */
+.brand-title {
+    display: block;
+}
+
+header {
+    padding-top: var(--space-m);
+    padding-bottom: var(--space-m);
+    min-height: 50vh !important;
+    display: flex;
+    align-items: center;
+}
+
+header .container {
+    width: 100%;
+}
+
+header h1 {
+    margin-bottom: var(--space-xs);
+}
+
+header p {
+    font-size: var(--step-1);
+    max-width: 600px;
+}
+
+/* Intro section styles */
+.intro-content {
+    max-width: 800px;
+}
+
+/* Focus area section styles */
+.focus-area-section {
+    position: relative;
+    overflow: hidden;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.focus-area-section .container {
+    padding-left: var(--space-xl);
+    padding-right: var(--space-xl);
+}
+
+.dotted-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: radial-gradient(circle, var(--color-background-secondary-1) 3px, transparent 3px);
+    background-size: 40px 40px;
+    opacity: 0.5;
+    z-index: 0;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+}
+
+.focus-area-section .container {
+    position: relative;
+    z-index: 1;
+}
+
+/* Focus item styles */
+.focus-item {
+    padding: var(--space-s);
+    border-radius: var(--radius-m);
+    background-color: var(--color-background-secondary-1);
+    height: 100%;
+}
+
+.focus-header {
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+    margin-bottom: var(--space-xs);
+}
+
+.focus-icon {
+    color: var(--color-gold);
+    flex-shrink: 0;
+}
+
+/* Updated focus title styles */
+.focus-title {
+    margin: 0;
+    font-size: var(--step--1); /* Smaller text size (2 steps down) */
+    font-weight: 400; /* Thinner font weight */
+    text-transform: uppercase; /* Uppercase text */
+    letter-spacing: 0.05em; /* Slightly increased letter spacing for better readability */
+}
+
+/* Newsletter section styles */
+.newsletter-container {
+    background-color: var(--color-mint);
+    border-radius: var(--radius-l);
+    padding: var(--space-l);
+}
+
+.newsletter-form {
+    display: flex;
+    gap: var(--space-xs);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.newsletter-input {
+    flex: 1;
+    padding: var(--space-xs) var(--space-s);
+    border: none;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: var(--step-0);
+    min-width: 300px;
+}
+
+.pill-input {
+    border-radius: 50px;
+}
+
+.newsletter-button {
+    background-color: var(--color-forest);
+    color: white;
+    border: none;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.pill-button {
+    border-radius: 50px;
+    padding: var(--space-xs) var(--space-m);
+}
+
+.newsletter-button:hover {
+    background-color: var(--color-gold);
+}
+
+.social-links, .footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.social-links li, .footer-links li {
+    margin-bottom: var(--space-xs);
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+    text-decoration: none;
+}
+
+.footer-links a {
+    text-decoration: none;
+}
+
+/* Remove underline from all footer links on hover */
+.social-links a:hover,
+.footer-links a:hover {
+    text-decoration: none;
+}
+
+.footer-bottom {
+    margin-top: var(--space-l);
+    padding-top: var(--space-m);
+    border-top: 1px solid var(--color-background-secondary-1);
+    text-align: center;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        gap: var(--space-s);
+    }
+    
+    .nav-menu {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: var(--space-xs) var(--space-s);
+    }
+    
+    .newsletter-form {
+        flex-direction: column;
+    }
+    
+    .newsletter-input, .newsletter-button {
+        width: 100%;
+        min-width: unset;
+    }
+} 
