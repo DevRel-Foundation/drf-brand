@@ -1,3 +1,8 @@
+/* 
+* This is the base style sheet for everything.
+* Don't forget to include the reset CSS file before this one.
+*/
+
 /* Fluid Space Scale
  * Generated with https://utopia.fyi/space/calculator
  * Using a min viewport of 320px and max viewport of 1240px
@@ -26,63 +31,39 @@
 
   /* Grid and container settings */
   --grid-max-width: 77.5rem;
+
   /* 1240px */
   --grid-gutter: var(--space-s-l, clamp(1.05rem, 0.68rem + 2.04vw, 2.75rem));
   --grid-columns: 12;
 
   /* Column width - based on golden ratio progression */
   --grid-column-min: clamp(1rem, 0.8rem + 1vw, 1.618rem);
-  /* Minimum column width */
   --grid-column-max: clamp(3.09rem, 2.5rem + 3vw, 5rem);
-  /* Maximum column width */
 
-  /* Color Palette - Light Mode (default) */
   --color-background: hsl(48, 100%, 98%);
-  /* FFFEF8 - Primary Background */
   --color-text: hsl(0, 0%, 32%);
-  /* 515151 - Main Text */
   --color-background-secondary-1: hsl(48, 61.8%, 94%);
-  /* F7F4E1 - Secondary Background 1 */
   --color-background-secondary-2: hsl(48, 13%, 92%);
-  /* F0EFEA - Secondary Background 2 */
 
   /* Brand accent colors */
   --color-mint: hsl(90, 65%, 81%);
-  /* #c8ecad - Mint Green */
   --color-blue: hsl(193, 100%, 92%);
-  /* #d8f7ff - Light Blue */
   --color-teal: hsl(168, 85%, 91%);
-  /* #d3f9f0 - Teal */
   --color-gold: hsl(41.9, 100%, 91.6%);
-  /* Gold */
   --color-accent-text: var(--color-mint);
-  /* Using Mint Green for accent text */
   --color-link: hsl(140, 38.2%, 18%);
-  /* Dark green for links in light mode */
 
-  /* Color Palette - Dark Mode */
   --color-background-dark: hsl(42, 10%, 10%);
-  /* 191919 - Primary Background */
   --color-text-dark: hsl(48, 20%, 90%);
-  /* E9E6D9 - Main Text */
   --color-background-secondary-1-dark: hsl(42, 16.2%, 16%);
-  /* 2A261E - Secondary Background 1 */
   --color-background-secondary-2-dark: hsl(42, 10%, 20%);
-  /* 2F2F33 - Secondary Background 2 */
 
-  /* Brand accent colors - Dark Mode */
   --color-mint-dark: hsl(90, 98%, 18%);
-  /* #275901 - Mint Green Dark */
   --color-blue-dark: hsl(193, 72%, 14%);
-  /* #0a313c - Blue Dark */
   --color-teal-dark: hsl(168, 63%, 14%);
-  /* #15372f - Teal Dark */
   --color-gold-dark: hsl(41.7, 74.5%, 21.6%);
-  /* Gold Dark */
   --color-accent-text-dark: var(--color-mint-dark);
-  /* Using Mint Green Dark for accent text */
   --color-link-dark: hsl(90, 65%, 81%);
-  /* Light green for links in dark mode */
 
   /* Border radius scale - based on our circular motif design language */
   --radius-xs: 4px;
