@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developer Relations Foundation</title>
+    <link rel="stylesheet" href="./assets/style.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    
+    <!-- Lucide Icons (via CDN) -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Page-specific styles -->
+    <link rel="stylesheet" href="./website-styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="padding-m">
+        <div class="container">
+            <div class="nav-container">
+                <div class="logo">DRF</div>
+                <ul class="nav-menu">
+                    <li><a href="#" class="active">About</a></li>
+                    <li><a href="#">Brand</a></li>
+                    <li><a href="#">Team</a></li>
+                    <li><a href="#">Get Involved</a></li>
+                    <li><a href="#">Working Groups</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="padding-m">
+        <div class="container">
+            <h1 class="space-stack-s">
+                <span class="brand-title">Developer Relations Foundation</span>
+            </h1>
+            <p class="space-stack-m">Fostering growth, community, and best practices in developer relations.</p>
+        </div>
+    </header>
+
+    <!-- Introduction with Lorem Ipsum -->
+    <section class="padding-m">
+        <div class="container space-stack-m">
+            <div class="intro-content">
+                <div class="intro-text">
+                    <p class="space-stack-s">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor.</p>
+                    
+                    <p>Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus. Mauris iaculis porttitor posuere. Praesent id metus massa, ut blandit odio.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Three Column Section -->
+    <section class="padding-s focus-area-section">
+        <div class="dotted-background"></div>
+        <div class="container space-stack-xl">            
+            <div class="u-grid u-grid-3">
+                <div class="grid-item">
+                    <div class="focus-item">
+                        <div class="focus-header">
+                            <i data-lucide="users" width="24" height="24" class="focus-icon"></i>
+                            <h3 class="focus-title">Network</h3>
+                        </div>
+                        <p>Creating inclusive spaces where developers can connect, collaborate, and grow together.</p>
+                    </div>
+                </div>
+                
+                <div class="grid-item">
+                    <div class="focus-item">
+                        <div class="focus-header">
+                            <i data-lucide="book-open" width="24" height="24" class="focus-icon"></i>
+                            <h3 class="focus-title">Build together</h3>
+                        </div>
+                        <p>Developing resources and programs that help technical audiences learn and adopt new technologies.</p>
+                    </div>
+                </div>
+                
+                <div class="grid-item">
+                    <div class="focus-item">
+                        <div class="focus-header">
+                            <i data-lucide="compass" width="24" height="24" class="focus-icon"></i>
+                            <h3 class="focus-title">Create resources</h3>
+                        </div>
+                        <p>Representing developer needs within organizations and ensuring their voices are heard in product decisions.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="padding-xl">
+        <div class="container space-stack-xl">
+            <div class="newsletter-container">
+                <h2 class="space-stack-s">Join Our Newsletter</h2>
+                <p class="space-stack-m">Stay updated with the latest in developer relations best practices, events, and community news.</p>
+                
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your email address" class="newsletter-input pill-input">
+                    <button type="submit" class="newsletter-button pill-button">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="padding-xl">
+        <div class="container">
+            <div class="u-grid u-grid-2">
+                <div class="footer-column">
+                    <h3 class="space-stack-s">Connect With Us</h3>
+                    <ul class="social-links">
+                        <li><a href="#"><i data-lucide="linkedin" width="24" height="24"></i> LinkedIn</a></li>
+                        <li><a href="#"><i data-lucide="github" width="24" height="24"></i> GitHub</a></li>
+                        <li><a href="#"><i data-lucide="message-circle" width="24" height="24"></i> Discord</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3 class="space-stack-s">About</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Mission</a></li>
+                        <li><a href="#">Values</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom space-stack-m">
+                <p>&copy; 2023 Developer Relations Foundation. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Lucide icons -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Initialize Lucide icons
+            lucide.createIcons();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,1285 @@
+/* Base styles */
+body {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Typography examples */
+.type-example {
+    margin-bottom: var(--space-m);
+}
+
+.alphabet-display {
+    margin-bottom: var(--space-s);
+}
+
+.alphabet {
+    font-size: var(--step-1);
+    line-height: 1.6;
+    letter-spacing: 0.02em;
+}
+
+.type-scale-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: var(--space-s);
+}
+
+.type-scale-label {
+    font-size: var(--step--1);
+    color: var(--color-text);
+    opacity: 0.8;
+    margin-bottom: var(--space-2xs);
+    width: 180px;
+    padding-right: var(--space-m);
+}
+
+.type-scale-preview {
+    flex-grow: 1;
+}
+
+.type-specimen {
+    margin-bottom: var(--space-m);
+    padding: var(--space-s);
+    border-radius: var(--radius-m);
+    background-color: var(--color-background-secondary-1);
+}
+
+.type-specimen-header {
+    margin-bottom: var(--space-xs);
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.type-specimen-name {
+    font-weight: 600;
+    font-size: var(--step-1);
+}
+
+.type-specimen-details {
+    font-size: var(--step--1);
+    opacity: 0.8;
+}
+
+/* Theme toggle */
+.theme-toggle {
+    position: fixed;
+    top: var(--space-s);
+    right: var(--space-s);
+    background: var(--color-background-secondary-2);
+    border: none;
+    border-radius: var(--radius-circle);
+    width: 2.5rem;
+    height: 2.5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    transition: background-color 0.3s ease;
+}
+
+.theme-toggle svg {
+    width: 1.5rem;
+    height: 1.5rem;
+    fill: var(--color-text);
+}
+
+/* Section styling */
+section {
+    padding: var(--space-xl);
+    background-color: var(--color-background);
+}
+
+.highlight-box {
+    background-color: var(--color-background-secondary-1);
+    border-radius: var(--radius-m);
+    padding: var(--space-s);
+}
+
+/* Introduction Section */
+.intro-content {
+    display: block;
+}
+
+@media (min-width: 768px) {
+    .intro-content {
+        display: block;
+        grid-template-columns: 1fr;
+        gap: var(--space-l);
+    }
+}
+
+.intro-text p {
+    font-size: 1.05rem;
+    margin: 0 0 var(--space-s) 0;
+}
+
+.values-list {
+    padding-left: var(--space-m);
+    margin: 0 0 var(--space-s) 0;
+}
+
+.values-list li {
+    margin-bottom: var(--space-xs);
+}
+
+.image-placeholder {
+    background-color: var(--color-background-secondary-2);
+    border-radius: var(--radius-l);
+    height: 100%;
+    min-height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-text);
+    font-style: italic;
+    border: 1px dashed var(--color-accent-text);
+}
+
+.placeholder-text {
+    padding: var(--space-s);
+    text-align: center;
+}
+
+/* Border Radius Demo */
+.radius-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: var(--space-m);
+    margin-top: var(--space-m);
+}
+
+.radius-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.radius-example {
+    width: 120px;
+    height: 120px;
+    background-color: var(--color-accent-text);
+    margin-bottom: var(--space-xs);
+    transition: transform 0.3s ease;
+}
+
+.radius-example:hover {
+    transform: scale(1.05);
+}
+
+.radius-name {
+    font-weight: bold;
+    margin-bottom: var(--space-2xs);
+}
+
+.radius-usage {
+    font-size: 0.9rem;
+    color: var(--color-text);
+    opacity: 0.8;
+}
+
+/* Code Example */
+.code-example {
+    background-color: rgba(0, 0, 0, 0.05);
+    padding: var(--space-s);
+    border-radius: var(--radius-s);
+    font-family: monospace;
+    font-size: 0.9rem;
+    overflow-x: auto;
+    white-space: pre-wrap;
+    margin: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Circular Motifs */
+.motif-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-m);
+    margin-top: var(--space-m);
+}
+
+@media (max-width: 768px) {
+    .motif-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.motif-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.motif-example {
+    width: 150px;
+    height: 150px;
+    background-color: var(--color-background);
+    border-radius: var(--radius-m);
+    margin-bottom: var(--space-xs);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.motif-single::before {
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background-color: var(--color-accent-text);
+    border-radius: var(--radius-circle);
+}
+
+.motif-group::before {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background-color: var(--color-accent-text);
+    border-radius: var(--radius-circle);
+    left: 30px;
+    top: 30px;
+}
+
+.motif-group::after {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-color: var(--color-blue);
+    border-radius: var(--radius-circle);
+    right: 30px;
+    bottom: 30px;
+}
+
+.motif-pattern {
+    overflow: hidden;
+}
+
+.motif-pattern::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: repeating-radial-gradient(circle at 30px 30px,
+            var(--color-accent-text) 0,
+            var(--color-accent-text) 10px,
+            transparent 10px,
+            transparent 30px);
+}
+
+.motif-overlap::before {
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background-color: var(--color-accent-text);
+    border-radius: var(--radius-circle);
+    opacity: 0.7;
+    left: 25px;
+}
+
+.motif-overlap::after {
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background-color: var(--color-blue);
+    border-radius: var(--radius-circle);
+    opacity: 0.7;
+    right: 20px;
+    bottom: 20px;
+}
+
+.motif-name {
+    font-weight: bold;
+}
+
+/* Spacing Visual Demo Styles */
+.spacing-demo {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: var(--space-xs);
+}
+
+.spacing-label {
+    width: 180px;
+    font-size: 0.9rem;
+    color: var(--color-text);
+    flex-shrink: 0;
+}
+
+.spacing-visual {
+    flex-grow: 1;
+    background-color: var(--color-accent-text);
+    border-radius: var(--radius-s);
+    min-width: 50px;
+    max-width: calc(100% - 190px);
+    transition: height 0.3s ease;
+}
+
+/* Example Component Styles */
+.example-component {
+    border: 1px solid var(--color-background-secondary-2);
+    border-radius: var(--radius-l);
+    overflow: hidden;
+    max-width: 600px;
+    background-color: var(--color-background);
+}
+
+.example-header {
+    background-color: var(--color-background-secondary-1);
+    padding: var(--space-s);
+    color: var(--color-text);
+}
+
+.example-header h4 {
+    margin: 0;
+    font-weight: 600;
+}
+
+.example-body {
+    padding: var(--space-m);
+}
+
+.example-date {
+    margin: 0 0 var(--space-xs) 0;
+    color: var(--color-text);
+    opacity: 0.8;
+    font-size: 0.9rem;
+}
+
+.example-title {
+    margin: 0 0 var(--space-s) 0;
+    font-size: 1.4rem;
+    color: var(--color-text);
+}
+
+.example-description {
+    margin: 0 0 var(--space-s) 0;
+    line-height: 1.5;
+}
+
+.example-details {
+    margin-bottom: var(--space-s);
+    padding: var(--space-xs);
+    background-color: var(--color-background-secondary-1);
+    border-radius: var(--radius-m);
+}
+
+.example-detail-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: var(--space-2xs);
+}
+
+.example-detail-item:last-child {
+    margin-bottom: 0;
+}
+
+.example-detail-icon {
+    margin-right: var(--space-xs);
+    font-size: 1.2rem;
+}
+
+.example-buttons {
+    display: flex;
+    gap: var(--space-xs);
+    margin-top: var(--space-s);
+}
+
+.example-button {
+    padding: var(--space-xs) var(--space-s);
+    border-radius: var(--radius-s);
+    border: none;
+    font-weight: 500;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    background-color: var(--color-accent-text);
+    color: var(--color-text);
+}
+
+.example-button:hover {
+    transform: translateY(-2px);
+}
+
+.example-button.secondary {
+    background-color: var(--color-blue);
+    color: var(--color-text);
+}
+
+/* Component spacing explanation */
+.component-spacing-list {
+    margin: 0;
+    padding-left: var(--space-m);
+}
+
+.component-spacing-list li {
+    margin-bottom: var(--space-2xs);
+}
+
+.component-spacing-list code {
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 0.1rem 0.3rem;
+    border-radius: var(--radius-xs);
+    font-family: monospace;
+    font-size: 0.9rem;
+}
+
+/* Color swatches */
+.color-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: var(--space-m);
+}
+
+.color-swatch {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.color-preview {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: var(--space-xs);
+    border: var(--border-thickness) solid var(--color-text);
+}
+
+body.dark-mode .color-preview {
+    border-color: var(--color-text-dark);
+}
+
+.color-name {
+    font-weight: bold;
+    margin-bottom: var(--space-2xs);
+}
+
+.color-info {
+    background-color: var(--color-background);
+    padding: var(--space-xs);
+    border-radius: var(--radius-m);
+    width: 100%;
+    max-width: 180px;
+    box-sizing: border-box;
+}
+
+.color-info p {
+    margin: var(--space-2xs) 0;
+    font-size: 0.9rem;
+    text-align: left;
+    word-break: break-word;
+}
+
+/* Font toggle control */
+.font-toggle {
+    position: fixed;
+    top: var(--space-s);
+    left: var(--space-s);
+    background: var(--color-background-secondary-2);
+    border: none;
+    border-radius: var(--radius-s);
+    padding: var(--space-xs) var(--space-s);
+    cursor: pointer;
+    font-family: var(--font-main);
+    color: var(--color-text);
+    transition: background-color 0.3s ease;
+    z-index: 100;
+}
+
+.font-toggle:hover {
+    background-color: var(--color-gold);
+}
+
+.font-toggle.active {
+    background-color: var(--color-accent-text);
+    color: white;
+}
+
+/* Grid demo styles */
+.grid-demo {
+    margin-bottom: var(--space-m);
+}
+
+.grid-item {
+    background-color: var(--color-background-secondary-1);
+    padding: var(--space-s);
+    border-radius: var(--radius-s);
+    text-align: center;
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+}
+
+.u-grid-12>.grid-item {
+    grid-column: span 3;
+}
+
+@media (max-width: 768px) {
+    .u-grid-12>.grid-item {
+        grid-column: span 6;
+    }
+}
+
+/* Motif Examples - Large Format */
+.motif-example-large {
+    width: 100%;
+    height: 250px;
+    background-color: var(--color-background);
+    border-radius: var(--radius-m);
+    padding: var(--space-m);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: var(--space-s);
+    overflow: hidden;
+    border: 1px solid var(--color-background-secondary-2);
+}
+
+/* Rounded Corners Demo */
+.rounded-corners-demo {
+    justify-content: space-around;
+    align-items: center;
+}
+
+.rounded-corners-demo>div {
+    width: 80px;
+    height: 80px;
+    background-color: var(--color-accent-text);
+}
+
+.rounded-m {
+    border-radius: var(--radius-m);
+}
+
+.rounded-l {
+    border-radius: var(--radius-l);
+}
+
+.rounded-xl {
+    border-radius: var(--radius-xl);
+}
+
+.rounded-circle {
+    border-radius: var(--radius-circle);
+}
+
+.border-only {
+    background-color: transparent;
+    border: 3px solid var(--color-accent-text);
+}
+
+/* Concentric Circles Demo */
+.concentric-circles-demo {
+    position: relative;
+}
+
+.concentric-circles-demo::before {
+    content: '';
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border: 2px solid var(--color-accent-text);
+    border-radius: 50%;
+    opacity: 0.7;
+}
+
+.concentric-circles-demo::after {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-color: var(--color-blue);
+    border-radius: var(--radius-circle);
+    right: 30px;
+    bottom: 30px;
+    opacity: 0.7;
+}
+
+.concentric-circles-demo .circle-inner {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border: 2px solid var(--color-accent-text);
+    border-radius: 50%;
+    opacity: 0.7;
+}
+
+.concentric-circles-demo .circle-innermost {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border: 2px solid var(--color-accent-text);
+    border-radius: 50%;
+    opacity: 0.7;
+}
+
+/* Wave Pattern */
+.motif-wave {
+    position: relative;
+    overflow: hidden;
+}
+
+.motif-wave::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 10 Q 17.5 5, 25 10 Q 32.5 15, 40 10' stroke='%2379bf44' fill='none' stroke-width='2'/%3E%3C/svg%3E");
+    background-size: 60px 20px;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.7;
+}
+
+/* Journal Grid Demo */
+.journal-grid-demo {
+    background-image: radial-gradient(var(--color-accent-text) 1px, transparent 1px);
+    background-size: 20px 20px;
+    opacity: 0.5;
+}
+
+/* Ellipses Demo */
+.ellipses-demo {
+    position: relative;
+}
+
+.ellipses-demo::before {
+    content: '';
+    position: absolute;
+    width: 200px;
+    height: 120px;
+    background-color: var(--color-accent-text);
+    border-radius: 50%;
+    opacity: 0.3;
+    transform: rotate(-15deg);
+}
+
+.ellipses-demo::after {
+    content: '';
+    position: absolute;
+    width: 180px;
+    height: 100px;
+    background-color: var(--color-blue);
+    border-radius: 50%;
+    opacity: 0.3;
+    transform: rotate(15deg);
+    left: 40px;
+}
+
+/* Pill Shapes Demo */
+.pill-shapes-demo {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: var(--space-m);
+    height: 100%;
+}
+
+.pill-shapes-demo .top-section {
+    display: flex;
+    gap: var(--space-s);
+    align-items: center;
+}
+
+.pill-shapes-demo .bottom-section {
+    width: 100%;
+    margin-top: auto;
+}
+
+.pill-button {
+    padding: var(--space-xs) var(--space-m);
+    border-radius: 50px;
+    border: none;
+    font-weight: 500;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.pill-button.primary {
+    background-color: var(--color-accent-text);
+    color: var(--color-text);
+}
+
+.pill-button.secondary {
+    background-color: var(--color-blue);
+    color: var(--color-text);
+}
+
+.pill-button:hover {
+    transform: translateY(-2px);
+}
+
+.pill-tag {
+    display: inline-block;
+    padding: var(--space-2xs) var(--space-s);
+    background-color: var(--color-blue);
+    color: var(--color-text);
+    border-radius: 50px;
+    font-size: 0.9rem;
+    margin-bottom: var(--space-xs);
+}
+
+.pill-input {
+    padding: var(--space-xs) var(--space-s);
+    border-radius: 50px;
+    border: 1px solid var(--color-background-secondary-2);
+    width: 100%;
+    max-width: 250px;
+    font-family: var(--font-main);
+}
+
+/* Background Circles Demo */
+.background-circles-demo {
+    position: relative;
+    overflow: hidden;
+}
+
+.background-circles-demo::before {
+    content: '';
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background-color: var(--color-accent-text);
+    border-radius: 50%;
+    opacity: 0.1;
+    top: -100px;
+    left: -50px;
+}
+
+.background-circles-demo::after {
+    content: '';
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background-color: var(--color-blue);
+    border-radius: 50%;
+    opacity: 0.1;
+    bottom: -50px;
+    right: -50px;
+}
+
+/* Additional Motifs */
+.motif-dots {
+    background-image: radial-gradient(var(--color-accent-text) 2px, transparent 2px);
+    background-size: 15px 15px;
+}
+
+.motif-gradient-circle {
+    background: radial-gradient(circle,
+            var(--color-accent-text) 0%,
+            transparent 70%);
+    opacity: 0.7;
+}
+
+.motif-arc {
+    position: relative;
+}
+
+.motif-arc::before {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border: 3px solid var(--color-accent-text);
+    border-radius: 50%;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+    transform: rotate(45deg);
+    opacity: 0.7;
+}
+
+.motif-bubble {
+    position: relative;
+}
+
+.motif-bubble::before {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: var(--color-accent-text);
+    border-radius: 50%;
+    opacity: 0.3;
+    top: 30px;
+    left: 30px;
+}
+
+.motif-bubble::after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: var(--color-accent-text);
+    border-radius: 50%;
+    opacity: 0.5;
+    bottom: 40px;
+    right: 40px;
+}
+
+.motif-ring {
+    position: relative;
+}
+
+.motif-ring::before {
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border: 4px solid var(--color-accent-text);
+    border-radius: 50%;
+    opacity: 0.7;
+}
+
+.motif-half-circle {
+    position: relative;
+    overflow: hidden;
+}
+
+.motif-half-circle::before {
+    content: '';
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background-color: var(--color-accent-text);
+    border-radius: 50%;
+    opacity: 0.3;
+    bottom: -75px;
+    left: 0;
+}
+
+.motif-quarter-circle {
+    position: relative;
+    overflow: hidden;
+}
+
+.motif-quarter-circle::before {
+    content: '';
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background-color: var(--color-accent-text);
+    border-radius: 50%;
+    opacity: 0.3;
+    bottom: -75px;
+    right: -75px;
+}
+
+/* Color combinations demo */
+.color-combinations {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--space-m);
+}
+
+.color-combo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.combo-preview {
+    width: 100%;
+    height: 120px;
+    border-radius: var(--radius-m);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: var(--space-xs);
+}
+
+.combo-element {
+    padding: var(--space-xs) var(--space-s);
+    border-radius: var(--radius-s);
+    font-weight: 600;
+    text-align: center;
+}
+
+.light-text {
+    color: white;
+}
+
+.combo-label {
+    font-size: var(--step--1);
+    text-align: center;
+}
+
+/* Background color classes */
+.mint-bg {
+    background-color: var(--color-mint);
+}
+
+.blue-bg {
+    background-color: var(--color-blue);
+}
+
+.teal-bg {
+    background-color: var(--color-teal);
+}
+
+.gold-bg {
+    background-color: var(--color-gold);
+}
+
+.text-border {
+    border: 1px solid var(--color-text);
+}
+
+/* Dark mode styles for color combinations */
+body.dark-mode .mint-bg {
+    background-color: var(--color-mint-dark);
+}
+
+body.dark-mode .blue-bg {
+    background-color: var(--color-blue-dark);
+}
+
+body.dark-mode .teal-bg {
+    background-color: var(--color-teal-dark);
+}
+
+body.dark-mode .gold-bg {
+    background-color: var(--color-gold-dark);
+}
+
+body.dark-mode .text-border {
+    border-color: var(--color-text-dark);
+}
+
+/* Accent Text Examples */
+.accent-text-examples {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-s);
+}
+
+.accent-text-box {
+    border-radius: var(--radius-m);
+    padding: var(--space-s);
+    width: 100%;
+}
+
+/* Default text color for accent boxes */
+.accent-text-content {
+    color: #333333;
+    /* Darker text for better contrast on light backgrounds */
+    padding: 0.5rem 0;
+}
+
+/* Light text on dark backgrounds */
+.accent-text-content.light {
+    color: #FFFFFF;
+    /* Pure white for maximum contrast on dark backgrounds */
+}
+
+/* Ensure dark mode examples use dark mode text color */
+body.dark-mode .dark-mode-examples .accent-text-content,
+body.dark-mode .dark-mode-examples .accent-text-content.light {
+    color: var(--color-text-dark);
+    /* Use dark mode text color */
+}
+
+/* Ensure dark mode doesn't override our fixed colors */
+body.dark-mode .accent-text-content {
+    color: #333333;
+    /* Keep dark text on light backgrounds even in dark mode */
+}
+
+body.dark-mode .accent-text-content.light {
+    color: #FFFFFF;
+    /* Keep white text on dark backgrounds even in dark mode */
+}
+
+.accent-text-content h4 {
+    font-weight: 300;
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-size: var(--step-0);
+}
+
+.accent-text-content p {
+    margin: 0;
+    line-height: 1.5;
+}
+
+.accent-text-content p:last-child {
+    margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+    .accent-text-examples {
+        grid-template-columns: 1fr;
+    }
+
+    .accent-text-box {
+        width: 100%;
+    }
+}
+
+/* Color palette section styling */
+.color-mode-container {
+    background-color: transparent;
+    border: 1px solid var(--color-background-secondary-2);
+    border-radius: var(--radius-m);
+    padding: var(--space-s);
+    margin-bottom: var(--space-m);
+}
+
+.color-mode-container h4 {
+    margin-top: 0;
+    margin-bottom: var(--space-s);
+    font-size: var(--step-1);
+    opacity: 0.7;
+}
+
+body.dark-mode .color-mode-container {
+    border-color: var(--color-background-secondary-1-dark);
+    background-color: transparent;
+}
+
+/* Custom page styles */
+
+header {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Header background elements */
+.header-background {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.header-concentric-circles {
+    position: absolute;
+    top: -100px;
+    right: -100px;
+    width: 50vh;
+    height: 50vh;
+    opacity: 0.1;
+}
+
+.header-concentric-circles::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 1px solid var(--color-text);
+    box-shadow:
+        0 0 0 10px var(--color-background),
+        0 0 0 35px var(--color-background),
+        0 0 0 36px var(--color-text),
+        0 0 0 65px var(--color-background),
+        0 0 0 66px var(--color-text),
+        0 0 0 100px var(--color-background),
+        0 0 0 101px var(--color-text),
+        0 0 0 140px var(--color-background),
+        0 0 0 141px var(--color-text),
+        0 0 0 170px var(--color-background),
+        0 0 0 171px var(--color-text);
+}
+
+.header-dots {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(circle, var(--color-text) 2px, transparent 2px);
+    background-size: 30px 30px;
+    opacity: 0.08;
+}
+
+/* Update header content positioning */
+header>div:not(.header-background) {
+    position: relative;
+    z-index: 1;
+    background-color: var(--color-background);
+    border-radius: var(--radius-m);
+    padding: var(--space-m);
+}
+
+/* Make intro section full width */
+.intro-content {
+    display: block;
+}
+
+@media (min-width: 768px) {
+    .intro-content {
+        display: block;
+        grid-template-columns: 1fr;
+        gap: var(--space-l);
+    }
+}
+
+/* Hide bullet points in color palette section */
+section:has(.color-palette) ul,
+section:has(.color-grid) ul,
+.color-mode-container ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin-left: 0;
+}
+
+/* Typography color mode containers in same row */
+.typography-colors-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-m);
+}
+
+@media (max-width: 768px) {
+    .typography-colors-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Character showcase styling */
+.character-showcase {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-m);
+}
+
+.character-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-m);
+}
+
+.character-column {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-background-secondary-1);
+    border-radius: var(--radius-m);
+    padding: var(--space-m);
+    min-height: 80px;
+}
+
+.character-column .alphabet {
+    margin: 0;
+    font-size: var(--step-1);
+    line-height: 1.4;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .character-row {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Forest Green accent boxes need fixed text color */
+.accent-text-box-light {
+    color: var(--color-text-light);
+}
+
+/* Ensure dark mode examples use dark mode text color */
+body.dark-mode .dark-mode-examples .accent-text-content,
+body.dark-mode .dark-mode-examples .accent-text-content.light {
+    color: var(--color-text-dark);
+    /* Use dark mode text color */
+}
+
+/* Header content layout */
+.header-content {
+    position: relative;
+    z-index: 1;
+    background-color: var(--color-background);
+    border-radius: var(--radius-m);
+    padding: var(--space-m);
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header-content h1 {
+    margin: 0;
+    width: 100%;
+    height: auto;
+}
+
+.header-content svg {
+    width: 100%;
+    height: auto;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .header-content {
+        padding: var(--space-s);
+    }
+    
+    .header-content svg {
+        max-width: 100%;
+    }
+}
+
+.header-logo {
+    height: 240px;
+    width: auto;
+    margin-bottom: var(--space-s);
+}
+
+@media (max-width: 768px) {
+    .header-logo {
+        height: 180px;
+    }
+}
+
+:root {
+    --color-logo-text: rgb(0,36,46);
+}
+
+body.dark-mode {
+    --color-logo-text: rgb(121,191,68);
+}
+
+/* Logo text color handling */
+#logo-text text,
+#logo-text path {
+    fill: var(--color-logo-text);
+}
+
+/* Logo text color handling */
+body:not(.dark-mode) #logo-text text,
+body:not(.dark-mode) #logo-text path {
+    fill: rgb(0,36,46);
+}
+
+body.dark-mode #logo-text text,
+body.dark-mode #logo-text path {
+    fill: rgb(121,191,68);
+}
