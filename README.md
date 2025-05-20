@@ -30,5 +30,10 @@ These resources are intended for DRF working groups and contributors to ensure c
         <td><img src="assets/images/logo_V3_white.png" width="200"></td>
         <td><img src="assets/images/logo_white.svg" width="200"></td>
     </tr>
+        <tr>
+        <th>monochrome</th>
+        <td><img src="assets/images/logo_monochrome.png" width="200"></td>
+        <td><img src="assets/images/logo_monochrome.png" width="200"></td>
+    </tr>
 </table>
-<img width="600" alt="drf-logo-cover" src="https://github.com/user-attachments/assets/63997f96-0118-4679-89dd-154b59b96667"/>
+<img width="580" alt="drf-logo-cover" src="https://github.com/user-attachments/assets/63997f96-0118-4679-89dd-154b59b96667"/>
