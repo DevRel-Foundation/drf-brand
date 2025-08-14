@@ -8,14 +8,14 @@
         <th colspan="1">SVG</th>
     </tr>
     <tr>
-        <th>dark-text</th>
-        <td><img src="./logo-dark-text.png" width="200"/></td>
-        <td><img src="./logo-dark-text.svg" width="200"/></td>
-    </tr>
-    <tr>
         <th>light-text</th>
         <td><img src="./logo-light-text.png" width="200"/></td>
         <td><img src="./logo-light-text.svg" width="200"/></td>
+    </tr>
+    <tr>
+        <th>dark-text</th>
+        <td><img src="./logo-dark-text.png" width="200"/></td>
+        <td><img src="./logo-dark-text.svg" width="200"/></td>
     </tr>
     <tr>
         <th>monochrome</th>
