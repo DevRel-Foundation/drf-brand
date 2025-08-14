@@ -1,0 +1,25 @@
+# macOS system files
+.DS_Store
+
+# Image files (common formats)
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.svg
+*.webp
+*.tiff
+*.bmp
+*.ico
+
+# Thumbnails and previews
+*_thumb.*
+*_preview.*
+
+# Photoshop and design files
+*.psd
+*.ai
+*.eps
+*.xcf
+
+# Other system files
